@@ -1,41 +1,50 @@
 'use strict';
 
-require('dotenv').config();
-
 const express = require('express');
+require('dotenv').config();
 const cors = require('cors');
-const climate = require('./data/weather.json');
+const app = express();
+app.use(cors());
 
-const foods = require('./data.json');
+// const axios = require('axios');
 
 const PORT = process.env.PORT || 3001;
+const climateJson = require('./data/weather.json');
 
-const app = express();
-
-// middleware - app.use
-app.use(cors());
+class Forecast {
+  constructor(date, description) {
+    this.date = date;
+    this.description = description;
+  }
+}
 
 app.get('/', (request, response) => {
   response.status(200).send('goto: localhost:3001/weather');
 });
 
-app.get('/foods', (request, response) => {
-  const veg = request.query.veg === 'true';
-
-  const firstVeggy = foods.find(food => food.vegetarian === veg);
-
-  response.send(firstVeggy);
-});
-
 // WEATHER
 app.get('/weather', (request, response) => {
-  const locationData = climate.find(city => city.city_name === 'Seattle');
-  // const firstClimate = climates.find(climate => climate.searchQuery === data);
-  const Forecast = {
-    date: '',
-    desciption: '',
-  };
-  response.status(200).send(weather);
+  let weatherArray = [];
+
+  const weatherResponse = climateJson.find(
+    city => city.city_name === request.query.searchQuery
+  );
+
+  if (weatherResponse) {
+    weatherArray = weatherResponse.data.map(
+      forecast =>
+        new Forecast(forecast.valid_date, forecast.weather.description)
+    );
+    response.status(200).send(weatherArray);
+  } else {
+    response.status(400).send('City not found');
+  }
 });
+
+// Errors
+app.get('*', errorHandler);
+function errorHandler(request, response) {
+  response.status(500).send('Something went wrong');
+}
 
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
