@@ -7,7 +7,8 @@
 
 1. Allow a user to view latitude and lon for a specified city.
 2. Render a map of the selected city.
-3. Add weather data for selected city.
+3. Show weather data for selected city.
+4. Show movies about selected city.
 
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
@@ -19,6 +20,10 @@
 
 React.js
 node.js
+Heroku
+Netlify
+
+![image](./public/lab8.jpg)
 
 ![image](./public/wrrc.png)
 
@@ -27,6 +32,34 @@ node.js
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
+
+Name of feature: 8.2 Movies
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 19:00
+
+Finish time: 22:30
+
+Actual time needed to complete: 3.5 hours
+
+```
+
+```
+
+Name of feature: 8.1 Weather(live)
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 14:15
+
+Finish time: 18:15
+
+Actual time needed to complete: 4 hours
+
+```
+
+```
 
 ```
 
