@@ -9,6 +9,7 @@
 2. Render a map of the selected city.
 3. Show weather data for selected city.
 4. Show movies about selected city.
+5. Refactor: Modularize the back-end codebase
 
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
@@ -32,6 +33,22 @@ Netlify
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
+
+```
+
+Name of feature: 9.1 Refactor: Modularize the back-end codebase
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 14:30
+
+Finish time: 15:30
+
+Actual time needed to complete: 1 hours
+
+```
+
+```
 
 Name of feature: 8.2 Movies
 
@@ -140,3 +157,4 @@ Actual time needed to complete: :45
 Code Fellows
 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+```
