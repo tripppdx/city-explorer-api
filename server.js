@@ -9,7 +9,7 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
-var getWeather = require('./weather.js');
+var getWeather = require('./weatherlab10.js');
 var getMovies = require('./movies.js');
 
 app.get('/', (request, response) => {
