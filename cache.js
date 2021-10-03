@@ -2,4 +2,6 @@
 
 const cacheDB = {};
 
-module.exports = { cacheDB };
+const moviesCache = {};
+
+module.exports = { cacheDB, moviesCache };

@@ -10,7 +10,7 @@ app.use(cors());
 const PORT = process.env.PORT || 3001;
 
 var getWeather = require('./weatherlab10.js');
-var getMovies = require('./movies.js');
+var getMovies = require('./movieslab10.js');
 
 app.get('/', (request, response) => {
   response.status(200).send('goto: localhost:3001/weather');

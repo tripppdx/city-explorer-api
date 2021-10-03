@@ -19,7 +19,7 @@ async function handleGetMovies(request, response) {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${searchQuery}&page=1`;
 
     const moviesResponse = await axios.get(url);
-    console.log(moviesResponse.data);
+    // console.log(moviesResponse.data);
     if (moviesResponse) {
       let moviesArray = moviesResponse.data.results.map(
         movie => new Films(movie.title, movie.poster_path)
